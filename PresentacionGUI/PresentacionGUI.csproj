@@ -63,6 +63,9 @@
     <EmbeddedResource Include="FormPpal.resx">
       <DependentUpon>FormPpal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistroLiquidaciones.resx">
+      <DependentUpon>FrmRegistroLiquidaciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

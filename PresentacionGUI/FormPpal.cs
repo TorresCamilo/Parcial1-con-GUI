@@ -55,9 +55,22 @@ namespace PresentacionGUI
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BtnLiquidaciones_Click(object sender, EventArgs e)
         {
+            AbrirFormInPanel(new FrmRegistroLiquidaciones());
+        }
 
+        private void AbrirFormInPanel(object formHijo)
+        {
+            if (this.PanelContenedor.Controls.Count > 0)
+                this.PanelContenedor.Controls.RemoveAt(0);
+            Form fh = formHijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.PanelContenedor.Controls.Add(fh);
+            this.PanelContenedor.Tag = fh;
+            fh.Show();
+            
         }
     }
 }

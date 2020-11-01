@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.MenuLateral = new System.Windows.Forms.Panel();
+            this.BtnLiquidaciones = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.BtnModificar = new System.Windows.Forms.Button();
+            this.BtnEliminar = new System.Windows.Forms.Button();
+            this.BtnConsultar = new System.Windows.Forms.Button();
             this.PctLogo = new System.Windows.Forms.PictureBox();
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.PctMinimizar = new System.Windows.Forms.PictureBox();
@@ -38,11 +43,6 @@
             this.PctCerrar = new System.Windows.Forms.PictureBox();
             this.BtnSlide = new System.Windows.Forms.PictureBox();
             this.PanelContenedor = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.MenuLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PctLogo)).BeginInit();
             this.BarraTitulo.SuspendLayout();
@@ -51,23 +51,105 @@
             ((System.ComponentModel.ISupportInitialize)(this.PctMaximar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnSlide)).BeginInit();
-            this.PanelContenedor.SuspendLayout();
             this.SuspendLayout();
             // 
             // MenuLateral
             // 
             this.MenuLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(69)))), ((int)(((byte)(102)))));
+            this.MenuLateral.Controls.Add(this.BtnLiquidaciones);
             this.MenuLateral.Controls.Add(this.button5);
-            this.MenuLateral.Controls.Add(this.button4);
-            this.MenuLateral.Controls.Add(this.button3);
-            this.MenuLateral.Controls.Add(this.button1);
-            this.MenuLateral.Controls.Add(this.button2);
+            this.MenuLateral.Controls.Add(this.BtnModificar);
+            this.MenuLateral.Controls.Add(this.BtnEliminar);
+            this.MenuLateral.Controls.Add(this.BtnConsultar);
             this.MenuLateral.Controls.Add(this.PctLogo);
             this.MenuLateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuLateral.Location = new System.Drawing.Point(0, 0);
             this.MenuLateral.Name = "MenuLateral";
             this.MenuLateral.Size = new System.Drawing.Size(250, 650);
             this.MenuLateral.TabIndex = 0;
+            // 
+            // BtnLiquidaciones
+            // 
+            this.BtnLiquidaciones.FlatAppearance.BorderSize = 0;
+            this.BtnLiquidaciones.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(117)))), ((int)(((byte)(230)))));
+            this.BtnLiquidaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnLiquidaciones.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLiquidaciones.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnLiquidaciones.Image = ((System.Drawing.Image)(resources.GetObject("BtnLiquidaciones.Image")));
+            this.BtnLiquidaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnLiquidaciones.Location = new System.Drawing.Point(1, 165);
+            this.BtnLiquidaciones.Name = "BtnLiquidaciones";
+            this.BtnLiquidaciones.Size = new System.Drawing.Size(250, 55);
+            this.BtnLiquidaciones.TabIndex = 7;
+            this.BtnLiquidaciones.Text = "Liquidaciones         ";
+            this.BtnLiquidaciones.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnLiquidaciones.UseVisualStyleBackColor = true;
+            this.BtnLiquidaciones.Click += new System.EventHandler(this.BtnLiquidaciones_Click);
+            // 
+            // button5
+            // 
+            this.button5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(117)))), ((int)(((byte)(230)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(0, 595);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(250, 55);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "SALIR";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // BtnModificar
+            // 
+            this.BtnModificar.FlatAppearance.BorderSize = 0;
+            this.BtnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(117)))), ((int)(((byte)(230)))));
+            this.BtnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnModificar.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnModificar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnModificar.Image = ((System.Drawing.Image)(resources.GetObject("BtnModificar.Image")));
+            this.BtnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnModificar.Location = new System.Drawing.Point(3, 228);
+            this.BtnModificar.Name = "BtnModificar";
+            this.BtnModificar.Size = new System.Drawing.Size(250, 55);
+            this.BtnModificar.TabIndex = 5;
+            this.BtnModificar.Text = "Modificar";
+            this.BtnModificar.UseVisualStyleBackColor = true;
+            // 
+            // BtnEliminar
+            // 
+            this.BtnEliminar.FlatAppearance.BorderSize = 0;
+            this.BtnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(117)))), ((int)(((byte)(230)))));
+            this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEliminar.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEliminar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("BtnEliminar.Image")));
+            this.BtnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnEliminar.Location = new System.Drawing.Point(3, 366);
+            this.BtnEliminar.Name = "BtnEliminar";
+            this.BtnEliminar.Size = new System.Drawing.Size(250, 55);
+            this.BtnEliminar.TabIndex = 4;
+            this.BtnEliminar.Text = "Eliminar ";
+            this.BtnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // BtnConsultar
+            // 
+            this.BtnConsultar.FlatAppearance.BorderSize = 0;
+            this.BtnConsultar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(117)))), ((int)(((byte)(230)))));
+            this.BtnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnConsultar.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnConsultar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("BtnConsultar.Image")));
+            this.BtnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnConsultar.Location = new System.Drawing.Point(3, 297);
+            this.BtnConsultar.Name = "BtnConsultar";
+            this.BtnConsultar.Size = new System.Drawing.Size(250, 55);
+            this.BtnConsultar.TabIndex = 3;
+            this.BtnConsultar.Text = "Consultar";
+            this.BtnConsultar.UseVisualStyleBackColor = true;
             // 
             // PctLogo
             // 
@@ -87,7 +169,7 @@
             this.BarraTitulo.Controls.Add(this.PctCerrar);
             this.BarraTitulo.Controls.Add(this.BtnSlide);
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
+            this.BarraTitulo.Location = new System.Drawing.Point(250, 0);
             this.BarraTitulo.Name = "BarraTitulo";
             this.BarraTitulo.Size = new System.Drawing.Size(1050, 50);
             this.BarraTitulo.TabIndex = 1;
@@ -160,94 +242,11 @@
             // 
             // PanelContenedor
             // 
-            this.PanelContenedor.Controls.Add(this.BarraTitulo);
             this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelContenedor.Location = new System.Drawing.Point(250, 0);
+            this.PanelContenedor.Location = new System.Drawing.Point(250, 50);
             this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(1050, 650);
+            this.PanelContenedor.Size = new System.Drawing.Size(1050, 600);
             this.PanelContenedor.TabIndex = 2;
-            // 
-            // button2
-            // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(117)))), ((int)(((byte)(230)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(3, 159);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(250, 55);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Liquidaciones         ";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(117)))), ((int)(((byte)(230)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(3, 297);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(250, 55);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Consultar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(117)))), ((int)(((byte)(230)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(3, 366);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(250, 55);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Eliminar ";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(117)))), ((int)(((byte)(230)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(3, 228);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(250, 55);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Modificar";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(117)))), ((int)(((byte)(230)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 595);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(250, 55);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "SALIR";
-            this.button5.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -255,6 +254,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1300, 650);
             this.Controls.Add(this.PanelContenedor);
+            this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.MenuLateral);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
@@ -267,7 +267,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.PctMaximar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PctCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnSlide)).EndInit();
-            this.PanelContenedor.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -276,18 +275,18 @@
 
         private System.Windows.Forms.Panel MenuLateral;
         private System.Windows.Forms.Panel BarraTitulo;
-        private System.Windows.Forms.Panel PanelContenedor;
         private System.Windows.Forms.PictureBox BtnSlide;
         private System.Windows.Forms.PictureBox PctLogo;
         private System.Windows.Forms.PictureBox PctRestaurar;
         private System.Windows.Forms.PictureBox PctMaximar;
         private System.Windows.Forms.PictureBox PctCerrar;
         private System.Windows.Forms.PictureBox PctMinimizar;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnModificar;
+        private System.Windows.Forms.Button BtnEliminar;
+        private System.Windows.Forms.Button BtnConsultar;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button BtnLiquidaciones;
+        private System.Windows.Forms.Panel PanelContenedor;
     }
 }
 
