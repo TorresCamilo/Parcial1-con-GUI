@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using DAL;
 using Entity;
 
@@ -7,20 +8,20 @@ namespace BLL
 {
     public class LiquidacionImpuestosService
     {
-        private LiquidacionImpuestoRepository liquidacionImpuestoRepository;
+        private LiquidacionImpuestoRepository liquidacionRepository;
 
         public LiquidacionImpuestosService()
         {
-            liquidacionImpuestoRepository = new LiquidacionImpuestoRepository();
+            liquidacionRepository = new LiquidacionImpuestoRepository();
         }
 
         public string Guardar(LiquidacionImpuesto liquidacion)
         {
             try
             {
-                if (this.Buscar(liquidacion.CodigoLiquidacion) == null)
+                if (this.BuscarPorCodigo(liquidacion.CodigoLiquidacion) == null)
                 {
-                    liquidacionImpuestoRepository.Guardar(liquidacion);
+                    liquidacionRepository.Guardar(liquidacion);
                     return "Se ha guardado exitosamente!";
 
                 }
@@ -36,7 +37,7 @@ namespace BLL
         {
             try
             {
-                List<LiquidacionImpuesto> liquidacionesDelFile = liquidacionImpuestoRepository.ConsultarTodos();
+                List<LiquidacionImpuesto> liquidacionesDelFile = liquidacionRepository.ConsultarTodos();
                 return new LiquidacionConsultarResponse(liquidacionesDelFile);
             }
             catch (Exception e)
@@ -48,10 +49,11 @@ namespace BLL
         {
             try
             {
-                LiquidacionImpuesto liquidacionParaEliminar = this.Buscar(codigoLiquidacion);
+                LiquidacionResponse liquidacionResponse = this.BuscarPorCodigo(codigoLiquidacion);
+                LiquidacionImpuesto liquidacionParaEliminar = liquidacionResponse.LiquidacionEncontrada;
                 if (liquidacionParaEliminar != null)
                 {
-                    liquidacionImpuestoRepository.Eliminar(liquidacionParaEliminar);
+                    liquidacionRepository.Eliminar(liquidacionParaEliminar);
                     return "Se ha eliminado la liquidacion!";
                 }
                 else
@@ -69,7 +71,7 @@ namespace BLL
             try
             {
                 DateTime fechaDeclaracion= Convert.ToDateTime(fechaDeclaracionNew);
-                liquidacionImpuestoRepository.ModificarFechaDeclaracion(liquidacionInicial, fechaDeclaracion);
+                liquidacionRepository.ModificarFechaDeclaracion(liquidacionInicial, fechaDeclaracion);
                 return "Se ha modificado correctamente";
             }
             catch (Exception e)
@@ -78,10 +80,41 @@ namespace BLL
             }
             
         }
-        public LiquidacionImpuesto Buscar(string codigoLiquidacion)
+        public LiquidacionResponse BuscarPorCodigo(string codigoLiquidacion)
         {
-            return liquidacionImpuestoRepository.Buscar(codigoLiquidacion);
+            try
+            {
+                LiquidacionImpuesto liquidacionFile = liquidacionRepository.Buscar(codigoLiquidacion);
+                if (liquidacionFile != null)
+                {
+                    return new LiquidacionResponse(liquidacionFile);
+                }
+                else
+                    return new LiquidacionResponse("No existe ninguna liquidacion registrada con este codigo.");
+            }
+            catch (Exception e)
+            {
+                return new LiquidacionResponse("Se ha presentado la siguiente excepcion: " + e.Message);
+            }
         }
+    }
+    public class LiquidacionResponse
+    {
+        public LiquidacionImpuesto LiquidacionEncontrada { get; set; }
+        public string MessageError { get; set; }
+        public bool ExistError { get; set; }
+        
+        public LiquidacionResponse(LiquidacionImpuesto liquidacion)
+        {
+            LiquidacionEncontrada = liquidacion;
+            ExistError = false;
+        }
+        public LiquidacionResponse(string messageError)
+        {
+            MessageError = messageError;
+            ExistError = true;
+        }
+        
     }
     public class LiquidacionConsultarResponse
     {

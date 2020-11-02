@@ -31,11 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistroLiquidaciones));
             this.BtnRegistrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.BtnBuscar = new System.Windows.Forms.Button();
             this.BtnLimpiarCampos = new System.Windows.Forms.Button();
             this.PnlTitulo = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.PnlBotones = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.RdBtnSi = new System.Windows.Forms.RadioButton();
@@ -51,7 +49,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.PnlContenedor = new System.Windows.Forms.Panel();
             this.PnlTitulo.SuspendLayout();
-            this.PnlBotones.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.PnlContenedor.SuspendLayout();
@@ -68,7 +65,7 @@
             this.BtnRegistrar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnRegistrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnRegistrar.Image")));
             this.BtnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnRegistrar.Location = new System.Drawing.Point(3, 3);
+            this.BtnRegistrar.Location = new System.Drawing.Point(595, 63);
             this.BtnRegistrar.Name = "BtnRegistrar";
             this.BtnRegistrar.Size = new System.Drawing.Size(146, 55);
             this.BtnRegistrar.TabIndex = 3;
@@ -88,25 +85,6 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Registro de Liquidaciones";
             // 
-            // BtnBuscar
-            // 
-            this.BtnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(69)))), ((int)(((byte)(102)))));
-            this.BtnBuscar.FlatAppearance.BorderSize = 0;
-            this.BtnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(117)))), ((int)(((byte)(230)))));
-            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBuscar.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnBuscar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BtnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscar.Image")));
-            this.BtnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnBuscar.Location = new System.Drawing.Point(3, 64);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(146, 55);
-            this.BtnBuscar.TabIndex = 5;
-            this.BtnBuscar.Text = "Buscar";
-            this.BtnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnBuscar.UseVisualStyleBackColor = false;
-            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
-            // 
             // BtnLimpiarCampos
             // 
             this.BtnLimpiarCampos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(69)))), ((int)(((byte)(102)))));
@@ -116,12 +94,13 @@
             this.BtnLimpiarCampos.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLimpiarCampos.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.BtnLimpiarCampos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnLimpiarCampos.Location = new System.Drawing.Point(261, 293);
+            this.BtnLimpiarCampos.Location = new System.Drawing.Point(584, 142);
             this.BtnLimpiarCampos.Name = "BtnLimpiarCampos";
             this.BtnLimpiarCampos.Size = new System.Drawing.Size(166, 39);
             this.BtnLimpiarCampos.TabIndex = 6;
             this.BtnLimpiarCampos.Text = "Limpiar Campos";
             this.BtnLimpiarCampos.UseVisualStyleBackColor = false;
+            this.BtnLimpiarCampos.Click += new System.EventHandler(this.BtnLimpiarCampos_Click);
             // 
             // PnlTitulo
             // 
@@ -143,15 +122,6 @@
             this.label2.Size = new System.Drawing.Size(554, 23);
             this.label2.TabIndex = 6;
             this.label2.Text = "Ingrese la siguiente informacion de su  liquidacion de impuesto: ";
-            // 
-            // PnlBotones
-            // 
-            this.PnlBotones.Controls.Add(this.BtnRegistrar);
-            this.PnlBotones.Controls.Add(this.BtnBuscar);
-            this.PnlBotones.Location = new System.Drawing.Point(594, 65);
-            this.PnlBotones.Name = "PnlBotones";
-            this.PnlBotones.Size = new System.Drawing.Size(161, 134);
-            this.PnlBotones.TabIndex = 9;
             // 
             // panel1
             // 
@@ -288,8 +258,8 @@
             // PnlContenedor
             // 
             this.PnlContenedor.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.PnlContenedor.Controls.Add(this.BtnRegistrar);
             this.PnlContenedor.Controls.Add(this.panel1);
-            this.PnlContenedor.Controls.Add(this.PnlBotones);
             this.PnlContenedor.Controls.Add(this.BtnLimpiarCampos);
             this.PnlContenedor.Location = new System.Drawing.Point(0, 93);
             this.PnlContenedor.Name = "PnlContenedor";
@@ -308,7 +278,6 @@
             this.Text = "FrmRegistroLiquidaciones";
             this.PnlTitulo.ResumeLayout(false);
             this.PnlTitulo.PerformLayout();
-            this.PnlBotones.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -322,11 +291,9 @@
 
         private System.Windows.Forms.Button BtnRegistrar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button BtnBuscar;
         private System.Windows.Forms.Button BtnLimpiarCampos;
         private System.Windows.Forms.Panel PnlTitulo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.FlowLayoutPanel PnlBotones;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox TxtFechaMaxima;
         private System.Windows.Forms.TextBox TxtFechaDeclaracion;

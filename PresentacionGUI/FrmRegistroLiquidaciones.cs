@@ -63,9 +63,14 @@ namespace PresentacionGUI
             return diasExtemporaneos > 0;
         }
 
-        private void BtnBuscar_Click(object sender, EventArgs e)
+        private void BtnLimpiarCampos_Click(object sender, EventArgs e)
         {
-
+            TxtCodigoLiquidacion.Text = null;
+            TxtIngresosContribuyente.Text = null;
+            TxtFechaDeclaracion.Text = null;
+            TxtFechaMaxima.Text = null;
+            RdBtnNo.Checked = false;
+            RdBtnSi.Checked = false;
         }
     }
 }

@@ -119,7 +119,7 @@ namespace Presentacion
             Consultar();
             Console.Write("Ingrese el codigo de la liquidacion que desea modificar: ");
             string codLiquidacionFirst = Console.ReadLine();
-            LiquidacionImpuesto liquidacionFirst = liquidacionService.Buscar(codLiquidacionFirst);
+            LiquidacionImpuesto liquidacionFirst = liquidacionService.BuscarPorCodigo(codLiquidacionFirst);
 
             if ( liquidacionFirst == null)            
                 Console.WriteLine("No se ha encontrado una liquidacion registrada con ese codigo!");
