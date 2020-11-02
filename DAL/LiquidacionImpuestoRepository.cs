@@ -76,19 +76,18 @@ namespace DAL
                     Guardar(liquidacionNew);
             }
         }
-        public void ModificarFechaDeclaracion(LiquidacionImpuesto liquidacionInicial, DateTime fechaDeclaracionNew)
+        public void ModificarFechaDeclaracion(LiquidacionImpuesto liqudacionNew)
         {
             List<LiquidacionImpuesto> listaLiquidaciones = ConsultarTodos();
             FileStream file = new FileStream(fileName, FileMode.Create);
             file.Close();
             foreach (var liquidacion in listaLiquidaciones)
             {
-                if (!(liquidacion.Equals(liquidacionInicial)))
+                if (!(liquidacion.Equals(liqudacionNew)))
                     Guardar(liquidacion);
                 else
                 {
-                    liquidacionInicial.FechaDeclaracion = fechaDeclaracionNew;
-                    Guardar(liquidacionInicial);
+                    Guardar(liqudacionNew);
                 }
             }
         }

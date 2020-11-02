@@ -66,12 +66,11 @@ namespace BLL
         }
         
         //Solo modifica la fecha
-        public string ModificarFechaDeclaracion(LiquidacionImpuesto liquidacionInicial, string fechaDeclaracionNew)
+        public string ModificarFechaDeclaracion(LiquidacionImpuesto liquidacionNew)
         {
             try
             {
-                DateTime fechaDeclaracion= Convert.ToDateTime(fechaDeclaracionNew);
-                liquidacionRepository.ModificarFechaDeclaracion(liquidacionInicial, fechaDeclaracion);
+                liquidacionRepository.ModificarFechaDeclaracion(liquidacionNew);
                 return "Se ha modificado correctamente";
             }
             catch (Exception e)

@@ -54,12 +54,6 @@ namespace PresentacionGUI
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
-        private void BtnLiquidaciones_Click(object sender, EventArgs e)
-        {
-            AbrirFormInPanel(new FrmRegistroLiquidaciones());
-        }
-
         private void AbrirFormInPanel(object formHijo)
         {
             if (this.PanelContenedor.Controls.Count > 0)
@@ -70,7 +64,15 @@ namespace PresentacionGUI
             this.PanelContenedor.Controls.Add(fh);
             this.PanelContenedor.Tag = fh;
             fh.Show();
-            
+
+        }
+        private void BtnLiquidaciones_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new FrmRegistroLiquidaciones());
+        }
+        private void BtnModificar_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new FrmModificarLiquidacion());
         }
     }
 }

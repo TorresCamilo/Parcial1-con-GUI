@@ -52,6 +52,12 @@
     <Compile Include="FormPpal.Designer.cs">
       <DependentUpon>FormPpal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmModificarLiquidacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModificarLiquidacion.Designer.cs">
+      <DependentUpon>FrmModificarLiquidacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRegistroLiquidaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormPpal.resx">
       <DependentUpon>FormPpal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModificarLiquidacion.resx">
+      <DependentUpon>FrmModificarLiquidacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRegistroLiquidaciones.resx">
       <DependentUpon>FrmRegistroLiquidaciones.cs</DependentUpon>
