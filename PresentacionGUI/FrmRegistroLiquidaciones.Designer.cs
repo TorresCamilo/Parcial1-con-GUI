@@ -37,18 +37,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.PnlBotones = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.TxtCodigoLiquidacion = new System.Windows.Forms.TextBox();
-            this.TxtIngresosContribuyente = new System.Windows.Forms.TextBox();
-            this.TxtFechaDeclaracion = new System.Windows.Forms.TextBox();
-            this.TxtFechaMaxima = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.RdBtnSi = new System.Windows.Forms.RadioButton();
             this.RdBtnNo = new System.Windows.Forms.RadioButton();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.TxtFechaMaxima = new System.Windows.Forms.TextBox();
+            this.TxtFechaDeclaracion = new System.Windows.Forms.TextBox();
+            this.TxtIngresosContribuyente = new System.Windows.Forms.TextBox();
+            this.TxtCodigoLiquidacion = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.PnlContenedor = new System.Windows.Forms.Panel();
             this.PnlTitulo.SuspendLayout();
             this.PnlBotones.SuspendLayout();
@@ -75,6 +75,7 @@
             this.BtnRegistrar.Text = "Guardar";
             this.BtnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnRegistrar.UseVisualStyleBackColor = false;
+            this.BtnRegistrar.Click += new System.EventHandler(this.BtnRegistrar_Click);
             // 
             // label1
             // 
@@ -104,6 +105,7 @@
             this.BtnBuscar.Text = "Buscar";
             this.BtnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnBuscar.UseVisualStyleBackColor = false;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // BtnLimpiarCampos
             // 
@@ -168,87 +170,14 @@
             this.panel1.Size = new System.Drawing.Size(509, 274);
             this.panel1.TabIndex = 10;
             // 
-            // label3
+            // panel2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Bahnschrift SemiLight", 13.2F);
-            this.label3.Location = new System.Drawing.Point(78, 30);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(160, 22);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Codigo liquidacion";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Bahnschrift SemiLight", 13.2F);
-            this.label4.Location = new System.Drawing.Point(9, 70);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(229, 22);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Ingresos del contribuyente";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Bahnschrift SemiLight", 13.2F);
-            this.label5.Location = new System.Drawing.Point(53, 110);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(185, 22);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Fecha de declaracion";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Bahnschrift SemiLight", 13.2F);
-            this.label6.Location = new System.Drawing.Point(36, 150);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(202, 22);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Fecha de plazo maximo";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Bahnschrift SemiLight", 13.2F);
-            this.label7.Location = new System.Drawing.Point(96, 190);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(142, 22);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Fue emplazado?";
-            // 
-            // TxtCodigoLiquidacion
-            // 
-            this.TxtCodigoLiquidacion.Font = new System.Drawing.Font("Bahnschrift SemiLight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtCodigoLiquidacion.Location = new System.Drawing.Point(255, 28);
-            this.TxtCodigoLiquidacion.Name = "TxtCodigoLiquidacion";
-            this.TxtCodigoLiquidacion.Size = new System.Drawing.Size(232, 26);
-            this.TxtCodigoLiquidacion.TabIndex = 5;
-            // 
-            // TxtIngresosContribuyente
-            // 
-            this.TxtIngresosContribuyente.Font = new System.Drawing.Font("Bahnschrift SemiLight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtIngresosContribuyente.Location = new System.Drawing.Point(255, 69);
-            this.TxtIngresosContribuyente.Name = "TxtIngresosContribuyente";
-            this.TxtIngresosContribuyente.Size = new System.Drawing.Size(232, 26);
-            this.TxtIngresosContribuyente.TabIndex = 6;
-            // 
-            // TxtFechaDeclaracion
-            // 
-            this.TxtFechaDeclaracion.Font = new System.Drawing.Font("Bahnschrift SemiLight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtFechaDeclaracion.Location = new System.Drawing.Point(255, 110);
-            this.TxtFechaDeclaracion.Name = "TxtFechaDeclaracion";
-            this.TxtFechaDeclaracion.Size = new System.Drawing.Size(232, 26);
-            this.TxtFechaDeclaracion.TabIndex = 7;
-            // 
-            // TxtFechaMaxima
-            // 
-            this.TxtFechaMaxima.Font = new System.Drawing.Font("Bahnschrift SemiLight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtFechaMaxima.Location = new System.Drawing.Point(255, 151);
-            this.TxtFechaMaxima.Name = "TxtFechaMaxima";
-            this.TxtFechaMaxima.Size = new System.Drawing.Size(232, 26);
-            this.TxtFechaMaxima.TabIndex = 8;
+            this.panel2.Controls.Add(this.RdBtnSi);
+            this.panel2.Controls.Add(this.RdBtnNo);
+            this.panel2.Location = new System.Drawing.Point(255, 190);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(232, 22);
+            this.panel2.TabIndex = 11;
             // 
             // RdBtnSi
             // 
@@ -274,14 +203,87 @@
             this.RdBtnNo.Text = "No";
             this.RdBtnNo.UseVisualStyleBackColor = true;
             // 
-            // panel2
+            // TxtFechaMaxima
             // 
-            this.panel2.Controls.Add(this.RdBtnSi);
-            this.panel2.Controls.Add(this.RdBtnNo);
-            this.panel2.Location = new System.Drawing.Point(255, 190);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(232, 22);
-            this.panel2.TabIndex = 11;
+            this.TxtFechaMaxima.Font = new System.Drawing.Font("Bahnschrift SemiLight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtFechaMaxima.Location = new System.Drawing.Point(255, 151);
+            this.TxtFechaMaxima.Name = "TxtFechaMaxima";
+            this.TxtFechaMaxima.Size = new System.Drawing.Size(232, 26);
+            this.TxtFechaMaxima.TabIndex = 8;
+            // 
+            // TxtFechaDeclaracion
+            // 
+            this.TxtFechaDeclaracion.Font = new System.Drawing.Font("Bahnschrift SemiLight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtFechaDeclaracion.Location = new System.Drawing.Point(255, 110);
+            this.TxtFechaDeclaracion.Name = "TxtFechaDeclaracion";
+            this.TxtFechaDeclaracion.Size = new System.Drawing.Size(232, 26);
+            this.TxtFechaDeclaracion.TabIndex = 7;
+            // 
+            // TxtIngresosContribuyente
+            // 
+            this.TxtIngresosContribuyente.Font = new System.Drawing.Font("Bahnschrift SemiLight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtIngresosContribuyente.Location = new System.Drawing.Point(255, 69);
+            this.TxtIngresosContribuyente.Name = "TxtIngresosContribuyente";
+            this.TxtIngresosContribuyente.Size = new System.Drawing.Size(232, 26);
+            this.TxtIngresosContribuyente.TabIndex = 6;
+            // 
+            // TxtCodigoLiquidacion
+            // 
+            this.TxtCodigoLiquidacion.Font = new System.Drawing.Font("Bahnschrift SemiLight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCodigoLiquidacion.Location = new System.Drawing.Point(255, 28);
+            this.TxtCodigoLiquidacion.Name = "TxtCodigoLiquidacion";
+            this.TxtCodigoLiquidacion.Size = new System.Drawing.Size(232, 26);
+            this.TxtCodigoLiquidacion.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Bahnschrift SemiLight", 13.2F);
+            this.label7.Location = new System.Drawing.Point(96, 190);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(142, 22);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Fue emplazado?";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Bahnschrift SemiLight", 13.2F);
+            this.label6.Location = new System.Drawing.Point(36, 150);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(202, 22);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Fecha de plazo maximo";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Bahnschrift SemiLight", 13.2F);
+            this.label5.Location = new System.Drawing.Point(53, 110);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(185, 22);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Fecha de declaracion";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Bahnschrift SemiLight", 13.2F);
+            this.label4.Location = new System.Drawing.Point(9, 70);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(229, 22);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Ingresos del contribuyente";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Bahnschrift SemiLight", 13.2F);
+            this.label3.Location = new System.Drawing.Point(78, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(160, 22);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Codigo liquidacion";
             // 
             // PnlContenedor
             // 
